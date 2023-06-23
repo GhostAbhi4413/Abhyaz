@@ -1,0 +1,177 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Customer Feedback Form</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  
+
+<style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group label {
+      font-weight: bold;
+    }
+
+    .form-group .form-check-label {
+      font-weight: normal;
+    }
+
+    .submit-btn {
+      margin-top: 20px;
+      text-align: center;
+    }
+  </style>
+   
+ 
+</head>
+
+
+
+    <body>
+      <div class="container">
+        <div class="text-center">
+          <img src="data:image/jpeg;base64,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" alt="Your Company Logo" height="80">
+          <h1 class="mt-3">Customer Feedback Form</h1>
+        </div>
+        <form id="feedbackForm">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" required>
+          </div>
+          <div class="form-group">
+            <label for="satisfaction">How satisfied are you with our product?</label>
+            <select class="form-control" id="satisfaction" required>
+              <option value="">Select satisfaction level</option>
+              <option value="very-satisfied">Very Satisfied</option>
+              <option value="satisfied">Satisfied</option>
+              <option value="neutral">Neutral</option>
+              <option value="dissatisfied">Dissatisfied</option>
+              <option value="very-dissatisfied">Very Dissatisfied</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Please rate the following aspects of our product on a scale of 1-5:</label>
+            <div class="row">
+              <div class="col-md-6">
+                <label for="easeOfUse">Ease of Use:</label>
+                <input type="number" class="form-control" id="easeOfUse" min="1" max="5" required>
+              </div>
+              <div class="col-md-6">
+                <label for="performance">Performance:</label>
+                <input type="number" class="form-control" id="performance" min="1" max="5" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <label for="features">Features:</label>
+                <input type="number" class="form-control" id="features" min="1" max="5" required>
+              </div>
+              <div class="col-md-6">
+                <label for="reliability">Reliability:</label>
+                <input type="number" class="form-control" id="reliability" min="1" max="5" required>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="likes">What do you like most about our product?</label>
+            <textarea class="form-control" id="likes" rows="3"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="improvements">How can we improve our product?</label>
+            <textarea class="form-control" id="improvements" rows="3"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Would you recommend our product to others?</label>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="recommendation" id="recommendationYes" value="yes" required>
+              <label class="form-check-label" for="recommendationYes">Yes</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="recommendation" id="recommendationNo" value="no">
+              <label class="form-check-label" for="recommendationNo">No</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="comments">Any additional comments or suggestions?</label>
+            <textarea class="form-control" id="comments" rows="3"></textarea>
+          </div>
+          <div class="submit-btn">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+    
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script>
+        // Handle form submission
+        $(document).ready(function() {
+          $('#feedbackForm').submit(function(event) {
+            event.preventDefault();
+            // Add your code here to handle form submission
+          });
+        });
+      </script>
+    </body>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('#feedbackForm').submit(function(event) {
+          event.preventDefault();
+
+          // Collect form data
+          var formData = {
+            name: $('#name').val(),
+            email: $('#email').val(),
+            satisfaction: $('#satisfaction').val(),
+            easeOfUse: $('#easeOfUse').val(),
+            performance: $('#performance').val(),
+            features: $('#features').val(),
+            reliability: $('#reliability').val(),
+            likes: $('#likes').val(),
+            improvements: $('#improvements').val(),
+            recommendation: $('input[name=recommendation]:checked').val(),
+            comments: $('#comments').val()
+          };
+
+          // Send form data to the backend
+          $.ajax({
+            url: 'http://localhost:3000/submit-feedback', // Update with your backend endpoint URL
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify(formData),
+            success: function(response) {
+              // Handle success response
+              alert(response.message);
+              // You can redirect to a success page or perform other actions as needed
+            },
+            error: function(xhr, status, error) {
+              // Handle error response
+              alert('An error occurred while submitting the feedback. Please try again.');
+              console.log(xhr.responseText);
+            }
+          });
+        });
+      });
+    </script>
+  </div>
+</body>
+</html>
